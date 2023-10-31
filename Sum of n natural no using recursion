@@ -1,0 +1,19 @@
+public class Main{
+   //1st para- konse no pr h, 2nd para- base condition kya hogi, 3rd para- final value kya h
+    public static void printSum(int i, int n, int sum){
+        //base case
+        if(i==n){
+            sum +=i;
+            System.out.println(sum);
+            return;
+        }
+        sum += i;
+        printSum(i+1, n, sum);
+    }
+
+    public static void main(String args[]){
+        int n=1;
+
+        printSum(1, 5, 0);
+    }
+}
