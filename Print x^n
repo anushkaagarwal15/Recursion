@@ -1,0 +1,21 @@
+public class Main{
+    public static int calcPorwer(int x, int n){
+        if(n==0){    //base case1
+            return 1;
+        }
+        if(x==0){    //base case2
+            return 0;
+        }
+        int xPownum1 = calcPorwer(x, n-1);
+        int xPownum = x*xPownum1;
+
+        return xPownum;
+    }
+    
+    public static void main(String args[]){
+
+        int x=2, n=5;
+        int ans = calcPorwer(x,n);
+        System.out.println(ans);
+    }
+}
